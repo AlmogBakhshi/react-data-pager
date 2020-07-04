@@ -1,0 +1,45 @@
+{
+  "name": "react-data-pager",
+  "version": "1.0.0",
+  "description": "pager that show you filtered data and you can select how much data you want show in each page",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "react-scripts": "3.4.1",
+    "prop-types": "15.7.2",
+    "react-icons": "^3.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlmogBakhshi/react-data-pager.git"
+  },
+  "keywords": [
+    "react",
+    "react-components",
+    "pager",
+    "data pager"
+  ],
+  "author": "Almog Bakhshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlmogBakhshi/react-data-pager/issues"
+  },
+  "homepage": "https://github.com/AlmogBakhshi/react-data-pager#readme"
+}
