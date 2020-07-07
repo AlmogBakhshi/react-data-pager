@@ -5,6 +5,9 @@
 ## Installation
 `npm install --save react-data-pager`
 
+This library using react hooks.
+Note that to enable Hooks, all React packages need to be 16.8.0 or higher.
+
 ## Prop Types
 |Prop|Type|Description|
 |---|---|---|

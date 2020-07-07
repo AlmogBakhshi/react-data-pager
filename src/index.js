@@ -40,10 +40,10 @@ const DataPager = (props) => {
         let prevPages = [];
         let nextPages = [];
         for (let index = currentPage - 1; index >= 1 && index >= (currentPage - 3); index--) {
-            prevPages.push(<span key={(index * -1)} style={{ cursor: 'pointer', marginRight: '5px' }} onClick={() => HandleSelectedPages(index)}>{index}</span>);
+            prevPages.push(<span key={(index * -1)} style={{ cursor: 'pointer', paddingRight: '5px' }} onClick={() => HandleSelectedPages(index)}>{index}</span>);
         }
         for (let index = currentPage; index <= countOfPages && index <= (currentPage + 3); index++) {
-            nextPages.push(<span key={index} style={{ cursor: 'pointer', marginLeft: index !== currentPage && '5px', color: index === currentPage && (props.selectedPageColor || '#5C919B') }} onClick={() => HandleSelectedPages(index)}>{index}</span>);
+            nextPages.push(<span key={index} style={{ cursor: 'pointer', paddingLeft: index !== currentPage && '5px', color: index === currentPage && (props.selectedPageColor || '#5C919B') }} onClick={() => HandleSelectedPages(index)}>{index}</span>);
         }
         const pages = [...prevPages.reverse(), ...nextPages]
         return pages;
@@ -53,19 +53,17 @@ const DataPager = (props) => {
         (props.data && Array.isArray(props.data) && arrayOfItemsEachPage.length === 1 && props.data.length > dataEachPage &&
             <div className='disableTextSelectionHighlighting container onlyPager' style={props.style}>
                 <div className='paging' style={props.stylePager}>
-                    <FaAngleLeft size='1.3em' onClick={HandlePreventPage} style={{ cursor: 'pointer', marginLeft: '10px', marginRight: '5px', color: '#5C919B' }} />
+                    <FaAngleLeft size='1.3em' className='nextPrevButton' onClick={HandlePreventPage} style={props.styleNextPrevButton} />
                     {ShowPages()}
-                    <FaAngleRight size='1.3em' onClick={HandleNextPage} style={{ cursor: 'pointer', marginRight: '10px', marginLeft: '5px', color: '#5C919B' }} />
+                    <FaAngleRight size='1.3em' className='nextPrevButton' onClick={HandleNextPage} style={props.styleNextPrevButton} />
                 </div>
             </div>)
         ||
         (props.data && Array.isArray(props.data) && props.data.length > dataEachPage &&
             <div className='disableTextSelectionHighlighting container pagerAndSelect' style={props.style} >
-                <div className='' style={{ display: 'flex', width: 'fit-content' }}>
-                    <select className='selectCountOfItems' style={props.styleDataEachPage} value={dataEachPage} onChange={e => setDataEachPage(e.target.value)}>
-                        {arrayOfItemsEachPage.map(items => <option key={items} value={items}>{items}</option>)}
-                    </select>
-                </div>
+                <select className='selectCountOfItems' style={props.styleDataEachPage} value={dataEachPage} onChange={e => setDataEachPage(e.target.value)}>
+                    {arrayOfItemsEachPage.map(items => <option key={items} value={items}>{items}</option>)}
+                </select>
                 <div className='paging' style={props.stylePager} >
                     <FaAngleLeft size='1.3em' className='nextPrevButton' onClick={HandlePreventPage} style={props.styleNextPrevButton} />
                     {ShowPages()}

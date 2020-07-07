@@ -27,6 +27,7 @@ justify-content: flex-start;
 .paging {
     width: 20%;
     height: fit-content;
+    min-width: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,8 +37,8 @@ justify-content: flex-start;
 
 .nextPrevButton {
     cursor: pointer;
-    margin-left: 10px;
-    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
     color: #5C919B;
 }
 
@@ -45,4 +46,5 @@ justify-content: flex-start;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
+    font-size: 1em;
 }

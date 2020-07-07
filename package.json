@@ -1,6 +1,6 @@
 {
   "name": "react-data-pager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pager that show you filtered data and you can select how much data you want show in each page",
   "main": "./build/index.js",
   "scripts": {
@@ -22,8 +22,8 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "react-scripts": "3.4.1",
-    "prop-types": "15.7.2",
+    "react-scripts": "^3.4.1",
+    "prop-types": "^15.7.2",
     "react-icons": "^3.10.0"
   },
   "repository": {
