@@ -22,7 +22,7 @@ Note that to enable Hooks, all React packages need to be 16.8.0 or higher.
 
 ## Example Code
 [demo](https://almogbakhshi.github.io/#/react-data-pager)
-```
+```javascript
 import React, { useState, useEffect } from 'react';
 import DataPager from 'react-data-pager';
 
