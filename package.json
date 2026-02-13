@@ -22,7 +22,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "prop-types": "^15.7.2",
     "react-icons": "^3.10.0"
   },
